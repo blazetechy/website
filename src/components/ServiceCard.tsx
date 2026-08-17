@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 import type { Service } from "@/lib/services";
 
 export default function ServiceCard({
@@ -8,7 +10,9 @@ export default function ServiceCard({
   service: Service;
   bulletLimit?: number;
 }) {
-  const bullets = bulletLimit ? service.bullets.slice(0, bulletLimit) : service.bullets;
+  const [expanded, setExpanded] = useState(false);
+  const canCollapse = Boolean(bulletLimit) && service.bullets.length > (bulletLimit ?? 0);
+  const bullets = canCollapse && !expanded ? service.bullets.slice(0, bulletLimit) : service.bullets;
 
   return (
     <div
@@ -39,13 +43,15 @@ export default function ServiceCard({
           </li>
         ))}
       </ul>
-      {bulletLimit && service.bullets.length > bulletLimit && (
-        <Link
-          href={`/services/#${service.slug}`}
-          className="mt-4 text-sm font-semibold text-orange hover:underline"
+      {canCollapse && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+          className="mt-4 self-start text-sm font-semibold text-orange hover:underline"
         >
-          Learn more &rarr;
-        </Link>
+          {expanded ? "Show less" : "Learn more"} <span aria-hidden="true">{expanded ? "↑" : "→"}</span>
+        </button>
       )}
     </div>
   );

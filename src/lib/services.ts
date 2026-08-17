@@ -187,7 +187,7 @@ export const company = {
   tagline: "Innovation. Solutions. Excellence.",
   phone: "08039673735",
   phoneIntl: "+2348039673735",
-  email: "info@blazetech.com.ng",
+  email: "blazetechintegrated@gmail.com",
   website: "www.blazetech.com.ng",
   address: "No 43 Nouakchott Street, WUSE Zone 1, Abuja",
 };

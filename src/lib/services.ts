@@ -185,7 +185,7 @@ export const company = {
   name: "BlazeTech Integrated Service Limited",
   shortName: "BlazeTech",
   tagline: "Innovation. Solutions. Excellence.",
-  phone: "08039673735",
+  phone: "+234 803 967 3735",
   phoneIntl: "+2348039673735",
   email: "blazetechintegrated@gmail.com",
   website: "www.blazetech.com.ng",

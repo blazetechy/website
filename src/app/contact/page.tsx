@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with BlazeTech Integrated Service Limited for IT, security and technology solutions. Call, WhatsApp or send us a message.",
+  alternates: {
+    canonical: "/contact/",
+  },
 };
 
 const mapQuery = encodeURIComponent(company.address);

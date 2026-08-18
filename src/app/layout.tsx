@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.blazetech.com.ng"),
   title: {
     default: "BlazeTech Integrated Service Limited | IT, Security & Technology Solutions",
     template: "%s | BlazeTech Integrated Service Limited",
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
     "cybersecurity Nigeria",
     "IT infrastructure",
   ],
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

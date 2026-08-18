@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Explore BlazeTech's full range of IT infrastructure, security, software, cloud and technology support services.",
+  alternates: {
+    canonical: "/services/",
+  },
 };
 
 export default function ServicesPage() {

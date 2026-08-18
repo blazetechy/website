@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about BlazeTech Integrated Service Limited — our mission, values, and commitment to reliable technology solutions.",
+  alternates: {
+    canonical: "/about/",
+  },
 };
 
 export default function AboutPage() {

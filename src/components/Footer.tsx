@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            <span className="font-bold">(C)</span> {new Date().getFullYear()}{" "}
+            <span className="font-bold">&copy;</span> {new Date().getFullYear()}{" "}
             <span className="font-bold">{company.name}</span>. All rights
             reserved.
           </p>

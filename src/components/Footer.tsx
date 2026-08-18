@@ -80,7 +80,8 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} {company.name}. All rights
+            <span className="font-bold">(C)</span> {new Date().getFullYear()}{" "}
+            <span className="font-bold">{company.name}</span>. All rights
             reserved.
           </p>
           <p>Let&apos;s build a smarter and secure future together.</p>

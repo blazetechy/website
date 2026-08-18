@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import nodemailer from "nodemailer";
+import { company } from "../src/lib/services";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -65,7 +66,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     await transporter.sendMail({
       from: `"${MAIL_FROM || "BlazeTech Website"}" <${MAIL_USER}>`,
-      to: MAIL_TO || MAIL_USER,
+      to: MAIL_TO || company.email,
       replyTo: email,
       subject: `New website enquiry from ${name}`,
       text: lines.join("\n"),
